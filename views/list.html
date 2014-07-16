@@ -22,7 +22,7 @@
                 <span ng-bind-html="item.contentSnippet"></span>
             </td>
             <td>
-                {{item.publishedDate}}
+                {{item.publishedDate | rssDate}}
             </td>
         </tr>
     </tbody>

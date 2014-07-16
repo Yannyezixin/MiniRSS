@@ -15,7 +15,7 @@
             <a class="navbar-brand" href="#/">MiniRSS</a>
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a href="#/manager">管理</a>
+                    <a href="#/manage">管理</a>
                 </li>
             </ul>
         </div>
@@ -33,7 +33,7 @@
                 </li>
             </ul>
         </div>
-        <div class="col-md-9 ng-view" ng-animate="{enter: 'fade-in'}">
+        <div class="col-md-9 ng-view" ng-animate="{enter: 'fade-enter'}">
         </div>
     </div>
 </div>
@@ -47,8 +47,10 @@
     <script src="scripts/service/LocalObjectStorage.js"></script>
     <script src="scripts/service/HashString.js"></script>
     <script src="scripts/filter/hash.js"></script>
+    <script src="scripts/filter/rssDate.js"></script>
     <script src="scripts/controller/ItemsCtrl.js"></script>
     <script src="scripts/controller/ItemCtrl.js"></script>
     <script src="scripts/controller/FeedList.js"></script>
+    <script src="scripts/controller/FeedManageCtrl.js"></script>
 </body>
 </html>
