@@ -1,5 +1,19 @@
 angular.module('yann.MiniRSS.FeedList', ['yann.LocalObjectStorage'])
     .service('FeedList', function ($rootScope, LocalObjectStorage) {
+        this.add = function(url, title) {
+            var list = this.get();
+            var id = localStorage.getItem('FeedListId') ? localStorage.getItem('FeedListId') : 1;
+
+            list.push({
+                url:    url,
+                title:  title,
+                id:     id
+            });
+
+            LocalObjectStorage.setObject('FeedList', list);
+            localStorage.setItem('FeedListId', ++id);
+            $rootScope.$broadcast('FeedList', list);
+        };
 
         this.delete = function (id) {
             var list = this.get();
