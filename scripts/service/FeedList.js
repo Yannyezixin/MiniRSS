@@ -34,8 +34,8 @@ angular.module('yann.MiniRSS.FeedList', ['yann.LocalObjectStorage'])
             }
 
             return new Array({
-                url: 'http://cacodaemon.de/index.php?rss=1',
-                title: 'Cacomania',
+                url: 'http://youbookee.com/feed.xml',
+                title: 'Youbookee',
                 id: 0
             });
         };

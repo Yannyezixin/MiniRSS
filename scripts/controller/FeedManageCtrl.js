@@ -11,6 +11,24 @@ angular.module('yann.MiniRSS')
             FeedList.delete(id);
         };
 
+        $scope.lookup = function () {
+            UrlLookup.fetch({q: $scope.lookup.url}, {}, function (data) {
+                if (data.responseStatus != 200 || (data.responseData && data.responseData.url == '')) {
+                    alert(data.responseDetails || 'Feed not found');
+                    return;
+                }
+
+                $scope.feed = data.responseData;
+                FeedLoad.fetch({q: data.responseData.url},{}, function (data) {
+                    if (data.responseStatus != 200) {
+                        return;
+                    }
+
+                    $scope.feed.title = data.responseData.feed.title;
+                });
+            });
+        };
+
         $scope.$on('FeedList', function (event, data) {
             $scope.feeds = data;
         });
