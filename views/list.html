@@ -15,7 +15,7 @@
     <tbody>
         <tr ng-repeat="item in feed.entries | filter:searchText">
             <td>
-                <a href="#/feed/{{feed.id}}/item//{{item.title}}">
+                <a href="#/feed/{{feed.id}}/item/{{item.title | hash}}">
                     <strong ng-bind-html="item.title"></strong>
                 </a>
                 <br />
