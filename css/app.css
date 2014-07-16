@@ -1,0 +1,34 @@
+body {
+    margin-top:70px;
+}
+.navbar-default {
+    background-color: #313F4E;
+}
+.navbar-default .navbar-brand {
+    color: #fff;
+}
+.navbar-default .navbar-brand:hover {
+    color: #ded;
+}
+.navbar-default .navbar-nav > li > a {
+    color: #fff;
+    background-color: #8a8b7f;
+}
+.navbar-default .navbar-nav > li > a:hover {
+    color: #124213;
+    background-color: #8b8b30;
+}
+.row-fluid {
+    width: 100%;
+}
+
+.yann-form-control-bg {
+    height: 60px;
+    border: 7px solid   #79828c;
+    padding: 3 25;
+    font-size: 28px;
+}
+.yann-form-control-bg:hover {
+    border-color: #79828c;
+    box-shadow: inset 0 1 1 #795333;
+}
