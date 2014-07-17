@@ -4,7 +4,7 @@ angular.module('yann.MiniRSS.googleapis.feed', ['ngResource'])
             fetch: { method: 'JSONP', params: {v: '1.0', callback: 'JSON_CALLBACK'}}
         });
     })
-    .factory('UrlLookkup', function ($resource) {
+    .factory('UrlLookup', function ($resource) {
         return $resource('http://ajax.googleapis.com/ajax/services/feed/lookup', {} ,{
             fetch: { method: 'JSONP', params: {v: '1.0', callback: 'JSON_CALLBACK'}}
         });
