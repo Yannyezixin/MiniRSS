@@ -1,5 +1,5 @@
 angular.module('yann.MiniRSS')
-    .controller('FeedManageCtrl', function ($scope, $location, FeedLoad, FeedList) {
+    .controller('FeedManageCtrl', function ($scope, $location, UrlLookup, FeedLoad, FeedList) {
         $scope.feeds = FeedList.get();
 
         $scope.add = function () {
